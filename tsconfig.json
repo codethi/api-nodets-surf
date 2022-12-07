@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+    "target": "es2019", 
+    "moduleResolution": "node",
+    "module": "commonjs",
+    "lib": ["es2019"], // adiciona as libs por default do es2019
+    "sourceMap": true, // Depois da compilação ainda consigo mapear os tipos
+    "outDir": "dist", // Diretorio do código compilado
+    "strict": true,
+    "noImplicitAny": true, // não permite tipagem any automática
+    "strictNullChecks": true, // não permite iniciar algum valor como null
+    "strictFunctionTypes": true,
+    "noImplicitThis": true, 
+    "resolveJsonModule": true,
+    "alwaysStrict": true,
+    "removeComments": true,
+    "noImplicitReturns": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": ".",
+    "paths": { // alias para diminuir os imports
+      "@src/*": ["./src/*"],
+      "@test/*": ["./test/*"]
+    },
+    "rootDirs": ["./src", "./test"],
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true
+  },
+  "include": ["./src/**/*.ts", "./test/**/*.ts"],
+  "exclude": ["./node_modules/*", "dist"]
+}
